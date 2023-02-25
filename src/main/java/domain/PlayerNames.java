@@ -14,14 +14,6 @@ public class PlayerNames {
         this.playerNames = createPlayerNames(playerNames);
     }
 
-    private List<String> validatePlayerNames(List<String> playerNames) {
-        validatePlayerName(playerNames);
-        validatePlayerSize(playerNames);
-        validateSamePlayerName(playerNames);
-        return playerNames;
-    }
-
-
     private static void validatePlayerName(List<String> playerNames) {
         for (String playerName : playerNames) {
             PlayerName.validateName(playerName);
@@ -32,6 +24,13 @@ public class PlayerNames {
         if (playerNames.size() < MIN_PLAYERS_SIZE) {
             throw new IllegalArgumentException(PLAYERS_SIZE_ERROR_MESSAGE);
         }
+    }
+
+    private List<String> validatePlayerNames(List<String> playerNames) {
+        validatePlayerName(playerNames);
+        validatePlayerSize(playerNames);
+        validateSamePlayerName(playerNames);
+        return playerNames;
     }
 
     private void validateSamePlayerName(List<String> playerNames) {

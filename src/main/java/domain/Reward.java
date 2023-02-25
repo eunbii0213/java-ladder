@@ -2,8 +2,8 @@ package domain;
 
 public class Reward {
     public static final String BLANK_ERROR_GUIDE_MESSAGE = "[ERROR] 실행 결과는 빈 칸이 올 수 없습니다";
-    private static final String REWARDS_LENGTH_ERROR_MESSAGE = "[ERROR] 실행 결과는 5자 이하로 입력해주세요.";
     public static final int MAX_NAME_LENGTH = 5;
+    private static final String REWARDS_LENGTH_ERROR_MESSAGE = "[ERROR] 실행 결과는 5자 이하로 입력해주세요.";
     private final String reward;
 
     public Reward(String reward) {

@@ -19,7 +19,7 @@ public class LadderGame {
         printLadders(players, rewards, ladder);
         ladder.traverseLines();
 
-        selectPlayerName(players,rewards);
+        selectPlayerName(players, rewards);
     }
 
     private Players validatePlayersInput() {
@@ -74,8 +74,8 @@ public class LadderGame {
         OutputView.printResult(players, ladder.getLadder(), rewards);
     }
 
-    private void selectPlayerName(Players players,Rewards rewards) {
+    private void selectPlayerName(Players players, Rewards rewards) {
         String selectedPlayerName = InputView.readSelectPlayer();
-        OutputView.printReward(selectedPlayerName, players,rewards);
+        OutputView.printReward(selectedPlayerName, players, rewards);
     }
 }

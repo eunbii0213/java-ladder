@@ -10,7 +10,8 @@ public class Player {
     public String getName() {
         return name.getName();
     }
-    public boolean isSameNameWithInput(String input){
+
+    public boolean isSameNameWithInput(String input) {
         return this.name.getName().equals(input);
     }
 }

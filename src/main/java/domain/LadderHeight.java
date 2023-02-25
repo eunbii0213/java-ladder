@@ -10,18 +10,18 @@ public final class LadderHeight {
         this.ladderHeight = Integer.parseInt(ladderHeight);
     }
 
-    private String validateLadderHeight(String ladderHeight) {
-        validateLadderHeightIsNumber(ladderHeight);
-
-        return ladderHeight;
-    }
-
     public static void validateLadderHeightIsNumber(String ladderHeight) {
         try {
             Integer.parseInt(ladderHeight);
         } catch (NumberFormatException exception) {
             throw new IllegalArgumentException(LADDER_HEIGHT_ERROR_MESSAGE);
         }
+    }
+
+    private String validateLadderHeight(String ladderHeight) {
+        validateLadderHeightIsNumber(ladderHeight);
+
+        return ladderHeight;
     }
 
     public int getLadderHeight() {
