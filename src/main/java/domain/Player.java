@@ -11,6 +11,6 @@ public class Player {
         return name.getName();
     }
     public boolean isSameNameWithInput(String input){
-        return this.name.equals(input);
+        return this.name.getName().equals(input);
     }
 }
