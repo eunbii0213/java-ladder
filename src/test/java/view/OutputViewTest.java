@@ -37,7 +37,7 @@ public class OutputViewTest {
         out = new ByteArrayOutputStream();
         players = new Players(new PlayerNames(nameList));
         OutputView outputView = new OutputView();
-        String expect = "judy " + "   ako" + " pobi";
+        String expect = "judy " + "  ako" + " pobi";
 
         System.setOut(new PrintStream(out));
         outputView.printNames(players);
