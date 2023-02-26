@@ -1,7 +1,7 @@
 package domain;
 
 public final class PlayerName {
-    public static final String ALL = "all";
+    private static final String ALL = "all";
     private static final int NAME_MAX_LENGTH = 5;
     private static final int NAME_MIN_LENGTH = 1;
     private static final String NAME_LENGTH_ERROR_MESSAGE = "[ERROR] 플레이어의 이름은 1이상 5글자 이하입니다.";
