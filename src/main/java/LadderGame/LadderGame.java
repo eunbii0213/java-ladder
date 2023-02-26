@@ -5,6 +5,7 @@ import view.InputView;
 import view.OutputView;
 
 public class LadderGame {
+    public static final String ALL_PLAYERS_REWARD = "all";
     private final BooleanCreator booleanCreator;
 
     public LadderGame(BooleanCreator booleanCreator) {
@@ -75,7 +76,10 @@ public class LadderGame {
     }
 
     private void selectPlayerName(Players players, Rewards rewards) {
-        String selectedPlayerName = InputView.readSelectPlayer();
-        OutputView.printReward(selectedPlayerName, players, rewards);
+        String selectedPlayerName;
+        do {
+            selectedPlayerName = InputView.readSelectPlayer();
+            OutputView.printReward(selectedPlayerName, players, rewards);
+        } while (!selectedPlayerName.equals(ALL_PLAYERS_REWARD));
     }
 }
